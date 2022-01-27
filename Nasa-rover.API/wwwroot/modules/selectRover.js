@@ -1,22 +1,22 @@
-import { global } from '../script/script.js';
+import { global, setTimelineActive } from '../script/script.js';
 import { selectDateAndRoverSpec } from './selectDateAndRoverSpec.js'
 
 export async function selectRover() {
+    setTimelineActive(stepOne);
 
     let response = await fetch('/api/Spacecrafts/');
     let roverInfo = await response.json();
-    console.log(roverInfo);
-
-    
+    //console.log(roverInfo);
 
     global.dynamic.innerHTML="";
     for (let i = 0; i < roverInfo.length; i++)
     {
-        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${roverInfo[i].name}?&api_key=XZ8Ryto558Nax2OqbPAJsYsSlx7J6qTqPOCcWusS`);
-        let roverManifest = await response.json();
-        console.log(roverManifest);
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${roverInfo[i].name}?&api_key=XZ8Ryto558Nax2OqbPAJsYsSlx7J6qTqPOCcWusS`)
+        .then(response => response.json())
+        .then(roverManifest => {
+            //console.log(roverManifest);
 
-        global.dynamic.insertAdjacentHTML('beforeend',' \
+            global.dynamic.insertAdjacentHTML('beforeend',' \
             <div id="photo'+i+'"class="card gx-0 mx-2 my-2" style="width: 18rem;"> \
                 <img class="card-img-top" src="'+roverInfo[i].smallImageUrl+'" alt="Bild '+roverInfo[i].name+'"> \
                 <div class="card-body"> \
@@ -33,6 +33,7 @@ export async function selectRover() {
                     <a onclick="selectDateAndRoverSpec(&quot;'+roverInfo[i].name+'&quot;)" class="btn btn-primary">Välj</a> \
                 </div> \
             </div>');
+        })
     }
 }
 window.selectDateAndRoverSpec = selectDateAndRoverSpec
