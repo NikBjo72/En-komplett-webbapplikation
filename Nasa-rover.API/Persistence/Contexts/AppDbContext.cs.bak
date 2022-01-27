@@ -1,0 +1,71 @@
+using Microsoft.EntityFrameworkCore;
+using Nasa_rover.API.Domain.Models;
+
+namespace Nasa_rover.API.Persistence.Contexts
+{
+    public class AppDbContext : DbContext
+    {
+        public DbSet<Spacecraft> Spacecrafts { get; set; }
+        public DbSet<Poem> Poems { get; set; }
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
+        
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Spacecraft>().ToTable("Spacecrafts");
+            builder.Entity<Spacecraft>().HasKey(p => p.Id);
+            builder.Entity<Spacecraft>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Spacecraft>().Property(p => p.Name).IsRequired().HasMaxLength(30);
+            builder.Entity<Spacecraft>().HasMany(p => p.Poems).WithOne(p => p.Spacecraft).HasForeignKey(p => p.SpacecraftId);
+
+            builder.Entity<Spacecraft>().HasData
+            (
+                new Rover {
+                    Id = 1,
+                    Name = "Spirit",
+                    Description = "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.",
+                    Weight = 1234,
+                    Wheel = 6,
+                },
+                new Rover {
+                    Id = 2,
+                    Name = "Opportunity",
+                    Description = "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+                    Weight = 1234,
+                    Wheel = 6,
+                },
+                new Rover {
+                    Id = 3,
+                    Name = "Curiosity",
+                    Description = "Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+                    Weight = 1234,
+                    Wheel = 6,
+                }
+            );
+
+            builder.Entity<Poem>().ToTable("Poems");
+            builder.Entity<Poem>().HasKey(p => p.Id);
+            builder.Entity<Poem>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Poem>().Property(p => p.Text).IsRequired().HasMaxLength(200);
+
+            builder.Entity<Poem>().HasData
+            (
+                new Poem {
+                    Text = "Spirit - Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.",
+                    SpacecraftId = 1
+                },
+                new Poem {
+                    Text = "Opportunity - Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.",
+                    SpacecraftId = 2
+                },
+                new Poem {
+                    Text = "Curiosity - Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.",
+                    SpacecraftId = 3
+                }
+            );
+        }
+
+    }
+}
