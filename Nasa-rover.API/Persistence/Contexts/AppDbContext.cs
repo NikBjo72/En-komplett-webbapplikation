@@ -29,8 +29,8 @@ namespace Nasa_rover.API.Persistence.Contexts
                 new Rover {
                     Id = 1,
                     Name = "Spirit",
-                    Description = "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.",
-                    shortDescription = "Cum sociis natoque penatibus et magnis dis parturient montes.",
+                    Description = "Spirit, också känd som MER-A (Mars Exploration Rover-A) eller MER-2, var NASAs första sond i Marsutforskningsprogrammet Mars Exploration Rover Mission. Den sköts upp med en Delta II-raket från Cape Canaveral Air Force Station, den 10 juni 2003 och landade på Mars yta, den 3 januari 2004. Den är syskonfarkost till MER-B, kallad Opportunity. Uppdraget var tänkt att pågå i 90 dagar, men tack vare att solcellerna då och då blåstes rena av starka vindar på Mars, överlevde Spirit i 2 269 dagar. Under sin tid på Mars tillryggalade den totalt 7,73 kilometer</br>2007 - I juli drog en enorm sandstorm in över bilen. Sandstormar på Mars kan pågå i flera månader. Detta gjorde att solcellerna på bilen inte kunde producera tillräckligt med energi. Detta medförde att Spirit under några veckor var försatt i viloläge. </br>2009 - Under sommaren körde den fast i sand vid &quot;Troy&quot; på västra sidan av &quot;Home Plate&quot;.</br>2010 - 26 januari meddelade NASA att Spirit numera ses som en stationär forskningsplattform [2]. Den 3 januari hade sex år gått sedan Spirit landande på Mars. Den 22 mars förlorade man kontakten med Spirit. </br>2011 - Den 25 maj 2011 förklarar NASA att uppdraget är avslutat, efter ett sista försök att återfå kontakten med rymdsonden.</br> ",
+                    shortDescription = "Spirit, också känd som MER-A (Mars Exploration Rover-A) eller MER-2, var NASAs första sond i Marsutforskningsprogrammet Mars Exploration Rover Mission.",
                     Weight = 1234,
                     Wheel = 6,
                     ImageUrl = "https://localhost:5001/img/Spirit.jpg",
@@ -39,8 +39,8 @@ namespace Nasa_rover.API.Persistence.Contexts
                 new Rover {
                     Id = 2,
                     Name = "Opportunity",
-                    Description = "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-                    shortDescription = "Fusce dapibus, tellus ac cursus commodo.",
+                    Description = "Opportunity (engelska: &quot;möjlighet&quot;), också känd som MER-B (Mars Exploration Rover-B) eller MER-1, med smeknamnet Oppy, var NASAs andra rymdsond i Mars-utforskningsprogrammet Mars Exploration Rover Mission. MER-B sköts iväg 8 juli 2003 och landade i området Meridiani planum på planeten Mars den 25 januari 2004. Den är tvillingfarkost till MER-A, Spirit.</br>NASA förklarade den 13 februari 2019 uppdraget för avslutat då man inte sedan juni 2018 haft kontakt med farkosten. Detta efter att en större sandstorm dragit fram över området där den befann sig. </br>Syftet var bland annat att utforska eventuell förekomst av vatten på planetens yta. Rymdsonden uppskattades kunna fungera i 90 dagar, men sonden fungerade i över femton år. </br>Nasa hade kontakt med sonden under hela färden till Mars och även vid inbromsningen och utfällningen. Av bilderna kunde man konstatera att marken består av finkornigt material, troligtvis i olika skikt. Robotens hjul gjorde tydliga avtryck i det mörkgråa eller svarta markskiktet. Av spektrumet att döma består marken av mineralen hematit, vilket vanligtvis bildas med hjälp av vatten.",
+                    shortDescription = "Opportunity (engelska: &quot;möjlighet&quot;), också känd som MER-B (Mars Exploration Rover-B) eller MER-1",
                     Weight = 1234,
                     Wheel = 6,
                     ImageUrl = "https://localhost:5001/img/Opportunity.jpg",

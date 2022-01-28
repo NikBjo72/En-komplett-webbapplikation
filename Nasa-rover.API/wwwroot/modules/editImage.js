@@ -27,7 +27,7 @@ export function editImage(imageUrl) {
                     <label for="exampleFormControlTextarea1">Inbjudningstext</label> \
                     <textarea class="form-control" id="cardBodyTextInput" rows="3"></textarea> \
                     <button id="editBtn" type="submitCardTextBtn" class="btn btn-primary mt-3">Lägg texten på kortet</button> \
-                    <button id="printCardBtn" onclick="printImage()" type="submitCardTextBtn" class="btn btn-primary mt-3 ml-3">Skriv ut kortet</button> \
+                    <button id="printCardBtn" type="submitCardTextBtn" class="btn btn-primary mt-3 ml-3">Skriv ut kortet</button> \
                     <button id="removeFrameBtn" type="submitCardTextBtn" class="btn btn-primary mt-3 ml-3">Ta bort ram</button> \
                     \
                     <div class="row"> \
@@ -63,6 +63,7 @@ export function editImage(imageUrl) {
     let inputHeader = document.getElementById("cardHeadlineInput");
     let frameImage = document.getElementById("frameImage");
     let editBtn = document.getElementById("editBtn");
+    let printCardBtn = document.getElementById("printCardBtn");
     let removeFrameBtn = document.getElementById("removeFrameBtn");
     let planetFrameBtn = document.getElementById("planetFrameBtn");
     let partyFrameBtn = document.getElementById("partyFrameBtn");
@@ -85,6 +86,11 @@ export function editImage(imageUrl) {
     editBtn.addEventListener("click", async () => {
         headline.innerText = inputHeader.value;
         cardText.innerText = bodyText.value;
+    });
+    printCardBtn.addEventListener("click", async () => {
+        let readyCard = document.getElementById("demoCard");
+        console.log(readyCard);
+        printImage(readyCard);
     });
 }
 window.printImage = printImage

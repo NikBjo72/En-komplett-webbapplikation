@@ -15,7 +15,7 @@
 }
 
 .container-fluid {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     height: auto;
   }
 
@@ -86,6 +86,13 @@ label {
 input,
 label {
     margin: .4rem 0;
+}
+#topHeader {
+    background-color: rgb(34, 36, 60);
+}
+
+.footer {
+    background-color: rgb(34, 36, 60);
 }
 
 /* *** Edit Card *** */
