@@ -42,31 +42,31 @@
                     </div>
                     <div class="container">                      
                         <div class="row">
-                            <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                            <div class="timeline-steps">
                                 <div class="timeline-step">
-                                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                                        <div id="stepOne" class="inner-circle"></div>
+                                    <div class="timeline-content">
+                                        <a onclick="selectRover()"><div id="stepOne" class="inner-circle"></div></a>
                                         <p class="h6 mt-3 mb-1">Steg 1</p>
                                         <p class="h6 text-muted mb-0 mb-lg-0">Välj Rover</p>
                                     </div>
                                 </div>
                                 <div class="timeline-step">
                                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                                        <div id="stepTwo" class="inner-circle"></div>
+                                        <a onclick="selectDateAndRoverSpec(global.selectedRover)"><div id="stepTwo" class="inner-circle"></div></a>
                                         <p class="h6 mt-3 mb-1">Steg 2</p>
                                         <p class="h6 text-muted mb-0 mb-lg-0">Läs om rover och välj datum för bilder.</p>
                                     </div>
                                 </div>
                                 <div class="timeline-step">
                                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
-                                        <div id="stepThree" class="inner-circle"></div>
+                                        <a onclick="listImages(global.selectedInputDate, global.selectedRover)"><div id="stepThree" class="inner-circle"></div></a>
                                         <p class="h6 mt-3 mb-1">Steg 3</p>
                                         <p class="h6 text-muted mb-0 mb-lg-0">Välj Bild</p>
                                     </div>
                                 </div>
                                 <div class="timeline-step">
                                     <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
-                                        <div id="stepFour" class="inner-circle"></div>
+                                        <a onclick="editImage(global.selectedImageUrl)"><div id="stepFour" class="inner-circle"></div></a>
                                         <p class="h6 mt-3 mb-1">Steg 4</p>
                                         <p class="h6 text-muted mb-0 mb-lg-0">Gör Din Layout</p>
                                     </div>

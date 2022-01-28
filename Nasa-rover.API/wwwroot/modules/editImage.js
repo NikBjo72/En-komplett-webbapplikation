@@ -3,6 +3,7 @@ import { printImage } from './printImage.js';
 import { makeTextResponsiveToContainer } from './makeTextResponsiveToContainer.js';
 
 export function editImage(imageUrl) {
+    global.selectedImageUrl = imageUrl;
 
     setTimelineActive(global.stepFour);
 

@@ -6,7 +6,6 @@ export async function selectRover() {
 
     let response = await fetch('/api/Spacecrafts/');
     let roverInfo = await response.json();
-    //console.log(roverInfo);
 
     global.dynamic.innerHTML="";
     for (let i = 0; i < roverInfo.length; i++)
@@ -14,7 +13,6 @@ export async function selectRover() {
         fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${roverInfo[i].name}?&api_key=XZ8Ryto558Nax2OqbPAJsYsSlx7J6qTqPOCcWusS`)
         .then(response => response.json())
         .then(roverManifest => {
-            //console.log(roverManifest);
 
             global.dynamic.insertAdjacentHTML('beforeend',' \
             <div id="photo'+i+'"class="card gx-0 mx-2 my-2" style="width: 18rem;"> \
@@ -36,4 +34,3 @@ export async function selectRover() {
         })
     }
 }
-window.selectDateAndRoverSpec = selectDateAndRoverSpec

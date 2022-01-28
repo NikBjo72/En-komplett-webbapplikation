@@ -57,7 +57,6 @@
     background-color: #3b82f6
 }
 
-
 .timeline-steps .timeline-content .inner-circle:before {
     content: "";
     background-color: #3b82f6;
@@ -66,7 +65,13 @@
     width: 3rem;
     min-width: 3rem;
     border-radius: 6.25rem;
-    opacity: .5
+    opacity: 0.5;
+}
+
+.inner-circle:hover{
+    height: 2rem !important;
+    width: 2rem !important;
+    margin: -0.5rem 0rem 0rem 0rem !important;
 }
 
 .col{

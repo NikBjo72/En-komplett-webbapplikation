@@ -2,6 +2,7 @@ import { global, setTimelineActive } from '../script/script.js';
 import { listImages } from './listImages.js';
 
 export async function selectDateAndRoverSpec(rover) {
+    global.selectedRover = rover;
     // *** Variabler i detta scoop ***
     let pictureDate;
     let carosuelImageOne;

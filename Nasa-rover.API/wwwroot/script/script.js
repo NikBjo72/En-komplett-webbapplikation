@@ -2,6 +2,8 @@
 
 import { listImages } from '../modules/listImages.js';
 import { selectRover } from '../modules/selectRover.js';
+import { selectDateAndRoverSpec } from '../modules/selectDateAndRoverSpec.js'
+import { editImage } from '../modules/editImage.js'
 
 const global = {
     dynamic: document.getElementById('dynamic'),
@@ -11,7 +13,10 @@ const global = {
     stepThree: document.getElementById('stepThree'),
     stepFour: document.getElementById('stepFour'),
     stepFive: document.getElementById('stepFive'),
-    nasa_api_key: "XZ8Ryto558Nax2OqbPAJsYsSlx7J6qTqPOCcWusS"
+    nasa_api_key: "XZ8Ryto558Nax2OqbPAJsYsSlx7J6qTqPOCcWusS",
+    selectedRover: "",
+    selectedInputDate: "",
+    selectedImageUrl: "",
 }
 export { global };
 
@@ -26,3 +31,9 @@ export function setTimelineActive(element){ //Sätter timlinen till active för 
     
     element.style.backgroundColor = "black";
 }
+
+window.selectRover = selectRover;
+window.selectDateAndRoverSpec = selectDateAndRoverSpec;
+window.editImage = editImage;
+window.listImages = listImages;
+window.global = global;

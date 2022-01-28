@@ -2,12 +2,12 @@ import { global, setTimelineActive } from '../script/script.js';
 import { editImage } from './editImage.js'
 
 export async function listImages(inputDate, inputRover ) {
+    global.selectedInputDate = inputDate;
 
     let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${inputRover}/photos?earth_date=${inputDate}&page=1&api_key=${global.nasa_api_key}`);
     let photoList = await response.json();
  
     setTimelineActive(global.stepThree);
-    //console.log(photoList)
     
     global.dynamic.innerHTML="";
     for (let i = 0; i < 25; i++){
@@ -26,4 +26,3 @@ export async function listImages(inputDate, inputRover ) {
             </div>');
     }
 }
-window.editImage = editImage
