@@ -15,7 +15,6 @@
 }
 
 .container-fluid {
-    /* min-height: 100vh; */
     height: auto;
   }
 
@@ -72,6 +71,7 @@
     height: 2rem !important;
     width: 2rem !important;
     margin: -0.5rem 0rem 0rem 0rem !important;
+    cursor: pointer;
 }
 
 .col{
@@ -83,16 +83,25 @@ label {
     font: 1rem 'Fira Sans', sans-serif;
 }
 
-input,
-label {
+input, label {
     margin: .4rem 0;
 }
+
 #topHeader {
     background-color: rgb(34, 36, 60);
 }
 
 .footer {
     background-color: rgb(34, 36, 60);
+}
+#headerImage:hover {
+    cursor: pointer;
+}
+.carousel-caption > h5{
+    text-shadow: black 2px 2px 6px;    
+}
+.carousel-caption > p{
+    text-shadow: black 2px 2px 6px;    
 }
 
 /* *** Edit Card *** */

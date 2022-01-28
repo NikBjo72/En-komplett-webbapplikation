@@ -19,5 +19,6 @@ export function printImage(readyCard) {
 
     makeTextResponsiveToContainer("card", "headline");
     makeTextResponsiveToContainer("card", "cardText");
+
 }
 
