@@ -45,11 +45,11 @@ export async function selectDateAndRoverSpec(rover) {
     else if (rover === "Curiosity")
     {
         carouselTextHeaderOne = "March 30, 2021";
-        carouselTextOne = "NASA’s Curiosity Mars rover used two different cameras to create this selfie in front of Mont Mercou, a rock outcrop that stands 20 feet (6 meters) tall. The panorama is made up of 60 images taken by the Mars Hand Lens Imager (MAHLI) on the rover’s robotic arm on March 26, 2021, the 3,070th Martian day, or sol, of the mission. These were combined with 11 images taken by the Mastcam on the mast, or “head,” of the rover on March 16, 2021, the 3,060th Martian day of the mission."
+        carouselTextOne = "NASA&apos;s Curiosity Mars rover used two different cameras to create this selfie in front of Mont Mercou, a rock outcrop that stands 20 feet (6 meters) tall. The panorama is made up of 60 images taken by the Mars Hand Lens Imager (MAHLI) on the rover’s robotic arm on March 26, 2021, the 3,070th Martian day, or sol, of the mission. These were combined with 11 images taken by the Mastcam on the mast, or “head,” of the rover on March 16, 2021, the 3,060th Martian day of the mission."
         carouselTextHeaderTwo = "June 23, 2019";
         carouselTextTwo = "This image was taken by the left Navcam on NASA's Curiosity Mars rover on June 18, 2019, the 2,440th Martian day, or sol, of the mission. It shows part of &quot;Teal Ridge,&quot; which the rover has been studying within a region called the &quot;clay-bearing unit.&quot;";
         carouselTextHeaderThree = "November 23, 2021";
-        carouselTextThree = "NASA’s Curiosity Mars rover used its black-and-white navigation cameras to capture panoramas of this scene at two times of day. Blue, orange, and green color was added to a combination of both panoramas for an artistic interpretation of the scene.";
+        carouselTextThree = "NASA&apos;s Curiosity Mars rover used its black-and-white navigation cameras to capture panoramas of this scene at two times of day. Blue, orange, and green color was added to a combination of both panoramas for an artistic interpretation of the scene.";
         carosuelImageOne = "/img/curiosity_carousel_1024x461px.png";
         carosuelImageTwo = "/img/curiosity_carousel_1024x461px_1.png";
         carosuelImageThree = "/img/curiosity_carousel_1024x461px_2.png";
@@ -79,76 +79,93 @@ export async function selectDateAndRoverSpec(rover) {
 
     global.dynamic.innerHTML="";
 
-    global.dynamic.insertAdjacentHTML('beforeend',` \
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> \
-            <ol class="carousel-indicators"> \
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> \
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> \
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> \
-            </ol> \
-            <div class="carousel-inner"> \
-              <div class="carousel-item active"> \
-                <img class="d-block w-100" src="${carosuelImageOne}" alt="First slide"> \
-                <div class="carousel-caption d-none d-md-block"> \
-                    <h5>${carouselTextHeaderOne}</h5> \
-                    <p>${carouselTextOne}</p> \
-                </div> \
-              </div> \
-              <div class="carousel-item"> \
-                <img class="d-block w-100" src="${carosuelImageTwo}" alt="Second slide"> \
-                <div class="carousel-caption d-none d-md-block"> \
-                    <h5>${carouselTextHeaderTwo}</h5> \
-                    <p>${carouselTextTwo}</p> \
-            </div> \
-              </div> \
-              <div class="carousel-item"> \
-                <img class="d-block w-100" src="${carosuelImageThree}" alt="Third slide"> \
-                <div class="carousel-caption d-none d-md-block"> \
-                    <h5>${carouselTextHeaderThree}</h5> \
-                    <p>${carouselTextThree}</p> \
-            </div> \
-              </div> \
-            </div> \
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> \
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span> \
-              <span class="sr-only">Previous</span> \
-            </a> \
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> \
-              <span class="carousel-control-next-icon" aria-hidden="true"></span> \
-              <span class="sr-only">Next</span> \
-            </a> \
-        </div> \
+    global.dynamic.insertAdjacentHTML('beforeend',`
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                      <img class="d-block w-100" src="${carosuelImageOne}" alt="First slide">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>${carouselTextHeaderOne}</h5>
+                          <p>${carouselTextOne}</p>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="${carosuelImageTwo}" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>${carouselTextHeaderTwo}</h5>
+                        <p>${carouselTextTwo}</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="${carosuelImageThree}" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>${carouselTextHeaderThree}</h5>
+                        <p>${carouselTextThree}</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
     `);
 
     global.dynamic.insertAdjacentHTML('beforeend',`
     <div class="row mt-3">
-        <div id="poemContainer" class="col-md pb-3">
-            <h5 class="pl-3">${rover}s diktsamling</h5>
-            <p class="pl-3">Detta är dikter inskickade av människor som föjer ${rover}s ensamma uppdrag på planeten Mars. </p>
-            <div id="overflowPoems" class="overflow-auto border">
-                <div id="poemGroup" class="list-group">
-                    
+        <div class="col-md pb-3">
+            <div id="poemContainer" class="col-md pb-3">
+                <h5 class="pl-3">${rover}s diktsamling</h5>
+                <p class="pl-3">Detta är dikter inskickade av människor som föjer ${rover}s ensamma uppdrag på planeten Mars. </p>
+                <div id="overflowPoems" class="overflow-auto border">
+                    <div id="poemGroup" class="list-group"></div>
                 </div>
             </div>
+
+            <div id="poemFormGroup"class="form-group col mt-3">
+                <fieldset>
+                    <p id="errorPoemInput"class="text-danger" hidden><strong>Det är obligatoriskt att fylla i alla fälten!</strong></p>
+                    <label for="poemHeadline">Diktrubrik</label>
+                    <input type="text" class="form-control" id="poemHeadline" placeholder="Min diktrubrik">
+                    <label for="poem">Dikt</label>
+                    <textarea class="form-control" id="poem" rows="4"></textarea>
+                    <label for="poemAuthor">Namn</label>
+                    <input type="text" class="form-control" id="author" placeholder="Förnamn Efternamn">
+                    <input type="hidden" class="form-control" id="roverId" value="${responseLocalApi.id}">
+                    <button id="submitPoemBtn" type="submit" class="btn btn-primary mt-3">Lägg upp dikten</button>
+                <fieldset/>
+            </div>     
         </div>
+
         <div class="col-md">
-        <h5 class="pl-3">Fakta om ${rover}</h5>
-        <p class="pl-3">${responseLocalApi.description}</p>
+            <h5 class="pl-3">Fakta om ${rover}</h5>
+            <p class="pl-3">${responseLocalApi.description}</p>
         </div>
+
         <div id="choiseColumn" class="col-md">
-                <h5>Välj datum för att hämta bilder</h5>
-                <div class="col">
-                    <div class="input-group date" id="datepicker">
-                        <input type="text" class="form-control" id="date"/>
-                        <span class="input-group-append">
-                          <span class="input-group-text bg-light d-block">
-                            <i class="fa fa-calendar"></i>
-                          </span>
-                        </span>
-                    </div>
-                    <div>För <strong>${rover}</strong> kan du välja att hämta bilder tagna under en dag, mellan datumen: ${roverManifest.photo_manifest.landing_date} och ${roverManifest.photo_manifest.max_date}.</div>
-                    <button id="sendDate" onclick="" type="submit" class="btn btn-primary mt-3">Välj</button>
+            <h5>Välj datum för att hämta bilder</h5>
+            <div class="col">
+                <div class="input-group date" id="datepicker">
+                    <input type="text" class="form-control" id="date"/>
+                    <span class="input-group-append">
+                      <span class="input-group-text bg-light d-block">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                    </span>
                 </div>
+                <div>För <strong>${rover}</strong> kan du välja att hämta bilder tagna under en dag, mellan datumen: ${roverManifest.photo_manifest.landing_date} och ${roverManifest.photo_manifest.max_date}.
+                </div>
+                <button id="sendDate" onclick="" type="submit" class="btn btn-primary mt-3">Välj</button>
+            </div>
         </div>
     </div>
     `);
@@ -157,30 +174,33 @@ export async function selectDateAndRoverSpec(rover) {
     let poemGroup = document.getElementById('poemGroup');
     let choiseColumn = document.getElementById('choiseColumn');
     let selectDateBtn = document.getElementById('sendDate');
+    let submitPoemBtn = document.getElementById('submitPoemBtn');
 
-    //debugger;
-    for (let i = 0; i < responseLocalApi.poems.length; i++)
-    {
-        let days = new Date(todayDateTime) - new Date(responseLocalApi.poems[i].createdDate);
-        days = Math.round(days/86400000);
-        console.log(days);
+    function writePoems(){
+        poemGroup.innerHTML = "";
+        for (let i = 0; i < responseLocalApi.poems.length; i++)
+        {
+            // @ts-ignore
+            let days = new Date(todayDateTime) - new Date(responseLocalApi.poems[i].createdDate);
+            days = Math.round(days/86400000);
 
-        poemGroup.insertAdjacentHTML('beforeend',`
-            <div class="list-group-item list-group-item-action flex-column align-items-start active">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">${responseLocalApi.poems[i].heading}</h5>
-                    <small>${days} days ago</small>
+            poemGroup.insertAdjacentHTML('afterbegin',`
+                <div class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">${responseLocalApi.poems[i].heading}</h5>
+                        <small>${days} days ago</small>
+                    </div>
+                    <p class="mb-1">${responseLocalApi.poems[i].text}</p>
+                    <small>// ${responseLocalApi.poems[i].author}</small>
                 </div>
-                <p class="mb-1">${responseLocalApi.poems[i].text}</p>
-                <small>// ${responseLocalApi.poems[i].author}</small>
-            </div>
-        `);
-    }
+            `);
+        }
+    };
+    writePoems();
 
     selectDateBtn.addEventListener('click', async function() {
+        // @ts-ignore
         pictureDate = date.value;
-        //console.log(pictureDate);
-        //console.log(rover);
         let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=${pictureDate}&page=1&api_key=${global.nasa_api_key}`);
         let photoList = await response.json();
 
@@ -193,7 +213,56 @@ export async function selectDateAndRoverSpec(rover) {
         }
     });
 
-    $(function() {
+    let poemHeadline = document.getElementById('poemHeadline');
+    let poem = document.getElementById('poem');
+    let author = document.getElementById('author');
+    let roverId = document.getElementById('roverId');
+    let errorPoemInput = document.getElementById('errorPoemInput');
+
+    submitPoemBtn.addEventListener('click', async function()
+    {
+        let poemData = {
+            // @ts-ignore
+            "Heading": `${poemHeadline.value}`,
+            // @ts-ignore
+            "Text": `${poem.value}`,
+            // @ts-ignore
+            "Author": `${author.value}`,
+            // @ts-ignore
+            "RoverId": `${roverId.value}`
+        }
+
+        const poems = await fetch ("https://localhost:5001/api/Poems", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(poemData),
+        });
+        const response = await poems.json();
+        if (response.status == 400)
+        {
+            errorPoemInput.hidden = false;
+        }
+        else
+        {
+            // @ts-ignore
+            poemHeadline.value="";
+            // @ts-ignore
+            poem.value="";
+            // @ts-ignore
+            author.value="";
+            // @ts-ignore
+            roverId.value="";
+
+            errorPoemInput.hidden = true;
+            selectDateAndRoverSpec(global.selectedRover)
+        }
+    });
+    
+    // @ts-ignore
+    $(function() { 
+        // @ts-ignore
         $('#datepicker')
         .datepicker({
             format: 'yyyy-mm-dd',

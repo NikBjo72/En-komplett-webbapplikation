@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Nasa_rover.API.Domain.Models
+namespace Nasa_rover.API.Recourses
 {
-    public class Poem {
+    public class PoemResource {
 
         public int Id { get; set; }
         public string Heading { get; set; }
         public string Text { get; set; }
         public string Author  { get; set; }
-        public DateTime CreatedDate  { get; set; } //= new DateTime(2022,01,20);
+        public DateTime CreatedDate  { get; set; }
         public int RoverId { get; set; }
     }
-
 }

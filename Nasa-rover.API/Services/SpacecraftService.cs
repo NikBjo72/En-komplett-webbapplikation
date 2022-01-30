@@ -6,7 +6,7 @@ using Nasa_rover.API.Domain.Models;
 using Nasa_rover.API.Domain.Repositories;
 using Nasa_rover.API.Domain.Services;
 
-namespace Nasa_rover.Services
+namespace Nasa_rover.API.Services
 {
     public class SpacecraftService : ISpacecraftService
     {

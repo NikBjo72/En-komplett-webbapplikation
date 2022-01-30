@@ -17,7 +17,7 @@ using Nasa_rover.API.Domain.Repositories;
 using Nasa_rover.API.Domain.Services;
 using Nasa_rover.API.Persistence.Contexts;
 using Nasa_rover.API.Persistence.Repositories;
-using Nasa_rover.Services;
+using Nasa_rover.API.Services;
 
 namespace Nasa_rover.API
 {
@@ -39,6 +39,11 @@ namespace Nasa_rover.API
 
             services.AddScoped<ISpacecraftRepository, SpacecraftRepository>();
             services.AddScoped<ISpacecraftService, SpacecraftService>();
+
+            services.AddScoped<IPoemRepository, PoemRepository>();
+            services.AddScoped<IPoemService, PoemService>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

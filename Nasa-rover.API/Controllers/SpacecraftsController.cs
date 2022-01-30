@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Nasa_rover.API.Domain.Models;
 using Nasa_rover.API.Domain.Services;
+using Nasa_rover.API.Recourses;
 
 namespace Nasa_rover.API.Controllers
 {
