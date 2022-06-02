@@ -1,0 +1,10 @@
+1: 10/10p — Ok 
+2: 10/10p — Ok 
+3: 15/15p — Bra! 
+4: 15/15p — Mycket bra modulupdelning - tänk som vidare tips på att skapa flera olika typer av moduler, ev. med seperation mellan datahämtning och processering och "HTML-rendering". 
+5: 20/20p — Mycket tydligt 
+6: 15/15p 
+7: 15/15p — Bra! Poem-identifikation med mycket mera 
+
+POÄNG: 100p Grymt jobbat!
+Omdöme: G (100 möjliga poäng)
