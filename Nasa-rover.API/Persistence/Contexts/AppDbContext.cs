@@ -71,7 +71,11 @@ namespace Nasa_rover.API.Persistence.Contexts
             builder.Entity<Poem>().ToTable("Poems");
             builder.Entity<Poem>().HasKey(p => p.Id);
             builder.Entity<Poem>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Poem>().Property(p => p.Heading).IsRequired().HasMaxLength(30);
             builder.Entity<Poem>().Property(p => p.Text).IsRequired().HasMaxLength(200);
+            builder.Entity<Poem>().Property(p => p.Author).IsRequired().HasMaxLength(30);
+            builder.Entity<Poem>().Property(p => p.RoverId).IsRequired();
+
 
             builder.Entity<Poem>().HasData
             (

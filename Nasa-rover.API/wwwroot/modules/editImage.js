@@ -89,7 +89,7 @@ export function editImage(imageUrl) {
     });
     printCardBtn.addEventListener("click", async () => {
         let readyCard = document.getElementById("demoCard");
-        console.log(readyCard);
+
         printImage(readyCard);
     });
 }
